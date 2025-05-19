@@ -31,4 +31,7 @@ public class StaticTextSqlNode implements SqlNode {
     return true;
   }
 
+  public String getText() {
+    return text;
+  }
 }

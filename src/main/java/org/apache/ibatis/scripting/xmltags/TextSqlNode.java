@@ -52,6 +52,14 @@ public class TextSqlNode implements SqlNode {
     return true;
   }
 
+  public Pattern getInjectionFilter() {
+    return injectionFilter;
+  }
+
+  public String getText() {
+    return text;
+  }
+
   private GenericTokenParser createParser(TokenHandler handler) {
     return new GenericTokenParser("${", "}", handler);
   }

@@ -32,4 +32,8 @@ public class MixedSqlNode implements SqlNode {
     contents.forEach(node -> node.apply(context));
     return true;
   }
+
+  public List<SqlNode> getContents() {
+    return contents;
+  }
 }

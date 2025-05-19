@@ -42,4 +42,12 @@ public class ChooseSqlNode implements SqlNode {
     }
     return false;
   }
+
+  public SqlNode getDefaultSqlNode() {
+    return defaultSqlNode;
+  }
+
+  public List<SqlNode> getIfSqlNodes() {
+    return ifSqlNodes;
+  }
 }

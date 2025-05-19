@@ -35,4 +35,11 @@ public class VarDeclSqlNode implements SqlNode {
     return true;
   }
 
+  public String getExpression() {
+    return expression;
+  }
+
+  public String getName() {
+    return name;
+  }
 }

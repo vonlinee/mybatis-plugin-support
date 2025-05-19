@@ -232,4 +232,43 @@ public class ForEachSqlNode implements SqlNode {
     }
   }
 
+  public String getClose() {
+    return close;
+  }
+
+  public String getCollectionExpression() {
+    return collectionExpression;
+  }
+
+  public Configuration getConfiguration() {
+    return configuration;
+  }
+
+  public SqlNode getContents() {
+    return contents;
+  }
+
+  public ExpressionEvaluator getEvaluator() {
+    return evaluator;
+  }
+
+  public String getIndex() {
+    return index;
+  }
+
+  public String getItem() {
+    return item;
+  }
+
+  public Boolean getNullable() {
+    return nullable;
+  }
+
+  public String getOpen() {
+    return open;
+  }
+
+  public String getSeparator() {
+    return separator;
+  }
 }

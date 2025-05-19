@@ -60,6 +60,30 @@ public class TrimSqlNode implements SqlNode {
     return result;
   }
 
+  public Configuration getConfiguration() {
+    return configuration;
+  }
+
+  public SqlNode getContents() {
+    return contents;
+  }
+
+  public String getPrefix() {
+    return prefix;
+  }
+
+  public List<String> getPrefixesToOverride() {
+    return prefixesToOverride;
+  }
+
+  public String getSuffix() {
+    return suffix;
+  }
+
+  public List<String> getSuffixesToOverride() {
+    return suffixesToOverride;
+  }
+
   private static List<String> parseOverrides(String overrides) {
     if (overrides != null) {
       final StringTokenizer parser = new StringTokenizer(overrides, "|", false);
