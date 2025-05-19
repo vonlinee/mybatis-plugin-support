@@ -1,5 +1,5 @@
 /*
- *    Copyright 2009-2024 the original author or authors.
+ *    Copyright 2009-2025 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -208,16 +208,11 @@ public class ParameterMapping {
   @Override
   public String toString() {
     // sb.append("configuration=").append(configuration); // configuration doesn't have a useful .toString()
-    String sb = "ParameterMapping{" + "property='" + property + '\'' +
-      ", mode=" + mode +
-      ", javaType=" + javaType +
-      ", jdbcType=" + jdbcType +
-      ", numericScale=" + numericScale +
-      // sb.append(", typeHandler=").append(typeHandler); // typeHandler also doesn't have a useful .toString()
-      ", resultMapId='" + resultMapId + '\'' +
-      ", jdbcTypeName='" + jdbcTypeName + '\'' +
-      ", expression='" + expression + '\'' +
-      '}';
+    String sb = "ParameterMapping{" + "property='" + property + '\'' + ", mode=" + mode + ", javaType=" + javaType
+        + ", jdbcType=" + jdbcType + ", numericScale=" + numericScale +
+        // sb.append(", typeHandler=").append(typeHandler); // typeHandler also doesn't have a useful .toString()
+        ", resultMapId='" + resultMapId + '\'' + ", jdbcTypeName='" + jdbcTypeName + '\'' + ", expression='"
+        + expression + '\'' + '}';
     return sb;
   }
 }

@@ -1,5 +1,5 @@
 /*
- *    Copyright 2009-2024 the original author or authors.
+ *    Copyright 2009-2025 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -288,21 +288,13 @@ public class ResultMapping {
   @Override
   public String toString() {
     // sb.append("configuration=").append(configuration); // configuration doesn't have a useful .toString()
-    String sb = "ResultMapping{" + "property='" + property + '\'' +
-      ", column='" + column + '\'' +
-      ", javaType=" + javaType +
-      ", jdbcType=" + jdbcType +
-      // sb.append(", typeHandler=").append(typeHandler); // typeHandler also doesn't have a useful .toString()
-      ", nestedResultMapId='" + nestedResultMapId + '\'' +
-      ", nestedQueryId='" + nestedQueryId + '\'' +
-      ", notNullColumns=" + notNullColumns +
-      ", columnPrefix='" + columnPrefix + '\'' +
-      ", flags=" + flags +
-      ", composites=" + composites +
-      ", resultSet='" + resultSet + '\'' +
-      ", foreignColumn='" + foreignColumn + '\'' +
-      ", lazy=" + lazy +
-      '}';
+    String sb = "ResultMapping{" + "property='" + property + '\'' + ", column='" + column + '\'' + ", javaType="
+        + javaType + ", jdbcType=" + jdbcType +
+        // sb.append(", typeHandler=").append(typeHandler); // typeHandler also doesn't have a useful .toString()
+        ", nestedResultMapId='" + nestedResultMapId + '\'' + ", nestedQueryId='" + nestedQueryId + '\''
+        + ", notNullColumns=" + notNullColumns + ", columnPrefix='" + columnPrefix + '\'' + ", flags=" + flags
+        + ", composites=" + composites + ", resultSet='" + resultSet + '\'' + ", foreignColumn='" + foreignColumn + '\''
+        + ", lazy=" + lazy + '}';
     return sb;
   }
 

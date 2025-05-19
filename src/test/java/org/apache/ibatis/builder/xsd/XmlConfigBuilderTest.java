@@ -1,5 +1,5 @@
 /*
- *    Copyright 2009-2024 the original author or authors.
+ *    Copyright 2009-2025 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -14,6 +14,8 @@
  *    limitations under the License.
  */
 package org.apache.ibatis.builder.xsd;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.InputStream;
 import java.util.Arrays;
@@ -51,8 +53,6 @@ import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 import org.apache.ibatis.type.JdbcType;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @Disabled("We'll try a different approach. See #1393")
 class XmlConfigBuilderTest {
@@ -135,8 +135,8 @@ class XmlConfigBuilderTest {
       assertInstanceOf(CustomIntegerTypeHandler.class, config.getTypeHandlerRegistry().getTypeHandler(Integer.class));
       assertInstanceOf(CustomLongTypeHandler.class, config.getTypeHandlerRegistry().getTypeHandler(Long.class));
       assertInstanceOf(CustomStringTypeHandler.class, config.getTypeHandlerRegistry().getTypeHandler(String.class));
-      assertInstanceOf(CustomStringTypeHandler.class, config.getTypeHandlerRegistry().getTypeHandler(String.class,
-        JdbcType.VARCHAR));
+      assertInstanceOf(CustomStringTypeHandler.class,
+          config.getTypeHandlerRegistry().getTypeHandler(String.class, JdbcType.VARCHAR));
 
       ExampleObjectFactory objectFactory = (ExampleObjectFactory) config.getObjectFactory();
       assertEquals(1, objectFactory.getProperties().size());

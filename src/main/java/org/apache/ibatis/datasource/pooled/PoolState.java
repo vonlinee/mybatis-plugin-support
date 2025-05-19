@@ -1,5 +1,5 @@
 /*
- *    Copyright 2009-2024 the original author or authors.
+ *    Copyright 2009-2025 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -143,31 +143,25 @@ public class PoolState {
   public String toString() {
     lock.lock();
     try {
-      String builder = "\n===CONFIGURATION==============================================" +
-        "\n jdbcDriver                     " + dataSource.getDriver() +
-        "\n jdbcUrl                        " + dataSource.getUrl() +
-        "\n jdbcUsername                   " + dataSource.getUsername() +
-        "\n jdbcPassword                   " +
-        (dataSource.getPassword() == null ? "NULL" : "************") +
-        "\n poolMaxActiveConnections       " + dataSource.poolMaximumActiveConnections +
-        "\n poolMaxIdleConnections         " + dataSource.poolMaximumIdleConnections +
-        "\n poolMaxCheckoutTime            " + dataSource.poolMaximumCheckoutTime +
-        "\n poolTimeToWait                 " + dataSource.poolTimeToWait +
-        "\n poolPingEnabled                " + dataSource.poolPingEnabled +
-        "\n poolPingQuery                  " + dataSource.poolPingQuery +
-        "\n poolPingConnectionsNotUsedFor  " + dataSource.poolPingConnectionsNotUsedFor +
-        "\n ---STATUS-----------------------------------------------------" +
-        "\n activeConnections              " + getActiveConnectionCount() +
-        "\n idleConnections                " + getIdleConnectionCount() +
-        "\n requestCount                   " + getRequestCount() +
-        "\n averageRequestTime             " + getAverageRequestTime() +
-        "\n averageCheckoutTime            " + getAverageCheckoutTime() +
-        "\n claimedOverdue                 " + getClaimedOverdueConnectionCount() +
-        "\n averageOverdueCheckoutTime     " + getAverageOverdueCheckoutTime() +
-        "\n hadToWait                      " + getHadToWaitCount() +
-        "\n averageWaitTime                " + getAverageWaitTime() +
-        "\n badConnectionCount             " + getBadConnectionCount() +
-        "\n===============================================================";
+      String builder = "\n===CONFIGURATION=============================================="
+          + "\n jdbcDriver                     " + dataSource.getDriver() + "\n jdbcUrl                        "
+          + dataSource.getUrl() + "\n jdbcUsername                   " + dataSource.getUsername()
+          + "\n jdbcPassword                   " + (dataSource.getPassword() == null ? "NULL" : "************")
+          + "\n poolMaxActiveConnections       " + dataSource.poolMaximumActiveConnections
+          + "\n poolMaxIdleConnections         " + dataSource.poolMaximumIdleConnections
+          + "\n poolMaxCheckoutTime            " + dataSource.poolMaximumCheckoutTime
+          + "\n poolTimeToWait                 " + dataSource.poolTimeToWait + "\n poolPingEnabled                "
+          + dataSource.poolPingEnabled + "\n poolPingQuery                  " + dataSource.poolPingQuery
+          + "\n poolPingConnectionsNotUsedFor  " + dataSource.poolPingConnectionsNotUsedFor
+          + "\n ---STATUS-----------------------------------------------------" + "\n activeConnections              "
+          + getActiveConnectionCount() + "\n idleConnections                " + getIdleConnectionCount()
+          + "\n requestCount                   " + getRequestCount() + "\n averageRequestTime             "
+          + getAverageRequestTime() + "\n averageCheckoutTime            " + getAverageCheckoutTime()
+          + "\n claimedOverdue                 " + getClaimedOverdueConnectionCount()
+          + "\n averageOverdueCheckoutTime     " + getAverageOverdueCheckoutTime()
+          + "\n hadToWait                      " + getHadToWaitCount() + "\n averageWaitTime                "
+          + getAverageWaitTime() + "\n badConnectionCount             " + getBadConnectionCount()
+          + "\n===============================================================";
       return builder;
     } finally {
       lock.unlock();
